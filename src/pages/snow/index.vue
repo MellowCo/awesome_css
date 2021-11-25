@@ -1,22 +1,16 @@
 <!--
  * @Author: licl
  * @Date: 2021-11-25 11:30:11
- * @LastEditTime: 2021-11-25 11:53:04
+ * @LastEditTime: 2021-11-25 13:07:03
  * @LastEditors: licl
  * @Description: snow
 -->
 
 <template>
   <div class="snow-content">
-    <div class="snow" v-for=" in num"></div>
+    <div class="snow" v-for=" in 200"></div>
   </div>
 </template>
-
-
-<script lang="ts" setup>
-import { ref } from 'vue';
-const num = ref(200)
-</script>
 
 
 <style lang="scss" scoped>
