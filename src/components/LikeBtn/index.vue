@@ -1,7 +1,7 @@
 <!--
  * @Author: licl
  * @Date: 2022-02-12 09:31:52
- * @LastEditTime: 2022-02-12 11:49:10
+ * @LastEditTime: 2022-02-12 15:36:40
  * @LastEditors: licl
  * @Description: 点赞按钮 https://juejin.cn/post/7061627681464385573
 -->
@@ -49,15 +49,14 @@ const handleClick = () => {
 <style scoped lang="scss">
 .like-btn {
   display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  border-radius: 10px;
-  width: 100px;
+  padding: 15px 30px;
   background-color: #fff;
   cursor: pointer;
-
   .heart {
     position: relative;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
   }
 
   .heart-svg {
