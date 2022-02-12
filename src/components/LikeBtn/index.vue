@@ -1,12 +1,12 @@
 <!--
  * @Author: licl
  * @Date: 2022-02-12 09:31:52
- * @LastEditTime: 2022-02-12 15:36:40
+ * @LastEditTime: 2022-02-12 15:58:31
  * @LastEditors: licl
  * @Description: 点赞按钮 https://juejin.cn/post/7061627681464385573
 -->
 <template>
-  <div class="like-btn" @click="handleClick">
+  <div class="like-btn btn" @click="handleClick">
     <div class="heart" ref="heartRef">
       <svg
         class="heart-svg"
@@ -48,8 +48,6 @@ const handleClick = () => {
 
 <style scoped lang="scss">
 .like-btn {
-  display: flex;
-  padding: 15px 30px;
   background-color: #fff;
   cursor: pointer;
   .heart {

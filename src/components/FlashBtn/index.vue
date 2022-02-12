@@ -1,7 +1,7 @@
 <!--
  * @Author: licl
  * @Date: 2022-02-12 15:20:05
- * @LastEditTime: 2022-02-12 15:48:15
+ * @LastEditTime: 2022-02-12 15:51:01
  * @LastEditors: licl
  * @Description: 
 -->
@@ -21,11 +21,12 @@
   border: 1px #fff solid;
   background-color: #10151e;
   color: #fff;
+  transition: .4s;
+
   &:hover {
     box-shadow: 0 0 15px 7px #74b9ff;
     &::before {
       transform: translateX(100%);
-      transition: all .6s;
     }
   }
 
@@ -43,6 +44,7 @@
     );
     content: "";
     transform: translateX(-100%);
+    transition: .6s;
   }
 }
 </style>
