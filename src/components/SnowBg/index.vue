@@ -1,7 +1,7 @@
 <!--
  * @Author: licl
  * @Date: 2021-11-25 13:30:05
- * @LastEditTime: 2022-02-12 09:29:09
+ * @LastEditTime: 2022-02-12 09:49:23
  * @LastEditors: licl
  * @Description: https://codepen.io/alphardex/pen/dyPorwJ
 -->
@@ -14,7 +14,13 @@
 <style lang="scss" scoped>
 .snow-content {
   overflow: hidden;
-  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  // height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   filter: drop-shadow(0 0 10px white);
 }
@@ -35,18 +41,18 @@
   $total: 200;
 
   @for $i from 1 through $total {
-    $random-x: random(1000000) * 0.0001vw;
-    $random-offset: random_range(-100000, 100000) * 0.0001vw;
+    $random-x: random(1000000) * .0001vw;
+    $random-offset: random_range(-100000, 100000) * .0001vw;
     $random-x-end: $random-x + $random-offset;
     $random-x-end-yoyo: $random-x + ($random-offset / 2);
     $random-yoyo-time: random_range(30000, 80000) / 100000;
     $random-yoyo-y: $random-yoyo-time * 100vh;
-    $random-scale: random(10000) * 0.0001;
+    $random-scale: random(10000) * .0001;
     $fall-duration: random_range(10, 30) * 1s;
     $fall-delay: random(30) * -1s;
 
     &:nth-child(#{$i}) {
-      opacity: random(10000) * 0.0001;
+      opacity: random(10000) * .0001;
       transform: translate($random-x, -10px) scale($random-scale);
       animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
     }
