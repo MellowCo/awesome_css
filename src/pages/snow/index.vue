@@ -6,12 +6,10 @@
  * @Description: snow
 -->
 
-<template>
-  <SnowBg></SnowBg>
-</template>
-
-
 <script setup lang="ts">
 import SnowBg from '../../components/SnowBg/index.vue'
 </script>
 
+<template>
+  <SnowBg />
+</template>

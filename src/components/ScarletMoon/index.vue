@@ -1,17 +1,11 @@
-<!--
- * @Author: licl
- * @Date: 2022-02-12 15:55:04
- * @LastEditTime: 2022-02-12 16:10:39
- * @LastEditors: licl
- * @Description: 猩红之月 https://codepen.io/alphardex/pen/eYmGEGp
--->
-<template>
-  <div class="scarlet-moon"></div>
-</template>
-
+<!-- @link: https://codepen.io/alphardex/pen/eYmGEGp -->
 <script setup lang="ts">
 
 </script>
+
+<template>
+  <div class="scarlet-moon" />
+</template>
 
 <style lang="scss" scoped>
 .scarlet-moon {

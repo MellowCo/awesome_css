@@ -1,13 +1,7 @@
-<!--
- * @Author: licl
- * @Date: 2021-11-25 13:30:05
- * @LastEditTime: 2022-02-12 09:49:23
- * @LastEditors: licl
- * @Description: https://codepen.io/alphardex/pen/dyPorwJ
--->
+<!-- @link: https://codepen.io/alphardex/pen/dyPorwJ -->
 <template>
   <div class="snow-content">
-    <div class="snow" v-for=" in 200"></div>
+    <div v-for="i in 200" :key="i" class="snow" />
   </div>
 </template>
 
@@ -44,8 +38,8 @@
     $random-x: random(1000000) * .0001vw;
     $random-offset: random_range(-100000, 100000) * .0001vw;
     $random-x-end: $random-x + $random-offset;
-    $random-x-end-yoyo: $random-x + ($random-offset / 2);
-    $random-yoyo-time: random_range(30000, 80000) / 100000;
+    $random-x-end-yoyo: $random-x + (calc($random-offset / 2));
+    $random-yoyo-time: calc(random_range(30000, 80000) / 100000);
     $random-yoyo-y: $random-yoyo-time * 100vh;
     $random-scale: random(10000) * .0001;
     $fall-duration: random_range(10, 30) * 1s;

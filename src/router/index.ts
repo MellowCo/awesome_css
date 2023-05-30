@@ -6,28 +6,31 @@
  * @Description: 路由
  */
 
+import type {
+  RouteRecordRaw,
+} from 'vue-router'
 import {
   createRouter,
   createWebHashHistory,
-  RouteRecordRaw
 } from 'vue-router'
+
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('../pages/index.vue')
+    component: () => import('../pages/index.vue'),
   },
   {
     path: '/snow',
     component: () => import('../pages/snow/index.vue'),
     meta: {
-      title: '雪'
-    }
-  }
+      title: '雪',
+    },
+  },
 ]
 
 const router = createRouter({
   routes,
-  history: createWebHashHistory()
+  history: createWebHashHistory(),
 })
 
 router.afterEach((to) => {

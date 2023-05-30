@@ -3,15 +3,17 @@
  * @Date: 2022-02-12 15:20:05
  * @LastEditTime: 2022-02-12 15:51:01
  * @LastEditors: licl
- * @Description: 
+ * @Description:
 -->
-<template>
-  <div class="flash-btn btn">flash btn</div>
-</template>
-
 <script setup lang="ts">
 
 </script>
+
+<template>
+  <div class="flash-btn btn">
+    flash btn
+  </div>
+</template>
 
 <style scoped lang="scss">
 .flash-btn {

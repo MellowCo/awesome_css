@@ -5,13 +5,16 @@
  * @LastEditors: licl
  * @Description: https://mojs.github.io/
  */
-import { computed, onMounted, ref, Ref } from 'vue'
+import type { Ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+
+// @ts-expect-error dot
 import mojs from '@mojs/core'
 
 export default function (heartRef: Ref) {
-  let spread = null
-  let circle = null
-  let heart = null
+  let spread: any = null
+  let circle: any = null
+  let heart: any = null
 
   // 是否点赞
   const isLike = ref(false)
@@ -21,7 +24,7 @@ export default function (heartRef: Ref) {
   const heartStyle = computed(() => ({
     fill: isLike.value ? 'red' : '',
     stroke: isLike.value ? 'red' : '',
-    transform: `scale3d(${scaleVal.value},${scaleVal.value},1)`
+    transform: `scale3d(${scaleVal.value},${scaleVal.value},1)`,
   }))
 
   onMounted(() => {
@@ -44,12 +47,12 @@ export default function (heartRef: Ref) {
           '#2ecc71',
           '#00cec9',
           '#3498db',
-          '#9b59b6'
-        ]
+          '#9b59b6',
+        ],
       },
       onStart() {
         isLike.value = true
-      }
+      },
     })
 
     // 点赞波纹
@@ -61,21 +64,22 @@ export default function (heartRef: Ref) {
       strokeWidth: { 20: 0 },
       radius: { 0: 20 },
       fill: 'transparent',
-      duration: 500
+      duration: 500,
     })
 
     // 爱心动画
     heart = new mojs.Tween({
       duration: 1200,
-      onUpdate: function (progress: number) {
+      onUpdate(progress: number) {
         if (progress > 0.3) {
           scaleVal.value = mojs.easing.elastic.out(
-            1.43 * progress - 0.43
+            1.43 * progress - 0.43,
           )
-        } else {
+        }
+        else {
           scaleVal.value = 0
         }
-      }
+      },
     })
   })
 
@@ -86,6 +90,6 @@ export default function (heartRef: Ref) {
   return {
     isLike,
     heartStyle,
-    start
+    start,
   }
 }

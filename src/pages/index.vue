@@ -3,19 +3,8 @@
  * @Date: 2022-02-12 09:30:28
  * @LastEditTime: 2022-02-12 15:58:22
  * @LastEditors: licl
- * @Description: 
+ * @Description:
 -->
-<template>
-  <SnowBg></SnowBg>
-
-  <div class="main-content">
-    <LikeBtn></LikeBtn>
-    <FlashBtn></FlashBtn>
-    <ScarletMoon></ScarletMoon>
-  </div>
-</template>
-
-
 <script setup lang="ts">
 import SnowBg from '../components/SnowBg/index.vue'
 import LikeBtn from '../components/LikeBtn/index.vue'
@@ -23,6 +12,15 @@ import FlashBtn from '../components/FlashBtn/index.vue'
 import ScarletMoon from '../components/ScarletMoon/index.vue'
 </script>
 
+<template>
+  <SnowBg />
+
+  <div class="main-content">
+    <LikeBtn />
+    <FlashBtn />
+    <ScarletMoon />
+  </div>
+</template>
 
 <style lang="scss">
 .main-content {

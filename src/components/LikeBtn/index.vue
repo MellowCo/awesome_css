@@ -1,13 +1,23 @@
-<!--
- * @Author: licl
- * @Date: 2022-02-12 09:31:52
- * @LastEditTime: 2022-02-12 15:58:31
- * @LastEditors: licl
- * @Description: 点赞按钮 https://juejin.cn/post/7061627681464385573
--->
+<!-- @link: https://juejin.cn/post/7061627681464385573 -->
+<script setup lang="ts">
+import { ref } from 'vue'
+import useMo from './useMo'
+
+const heartRef = ref(null)
+
+const { heartStyle, isLike, start } = useMo(heartRef)
+
+function handleClick() {
+  if (isLike.value)
+    isLike.value = false
+  else
+    start()
+}
+</script>
+
 <template>
   <div class="like-btn btn" @click="handleClick">
-    <div class="heart" ref="heartRef">
+    <div ref="heartRef" class="heart">
       <svg
         class="heart-svg"
         :style="heartStyle"
@@ -24,27 +34,11 @@
       </svg>
     </div>
 
-    <div class="info">99喜欢</div>
+    <div class="info">
+      99喜欢
+    </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-import useMo from './useMo'
-
-const heartRef = ref(null)
-
-const { heartStyle, isLike, start } = useMo(heartRef)
-
-
-const handleClick = () => {
-  if (isLike.value) {
-    isLike.value = false
-  } else {
-    start()
-  }
-}
-</script>
 
 <style scoped lang="scss">
 .like-btn {
