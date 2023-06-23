@@ -1,10 +1,3 @@
-/*
- * @Author: licl
- * @Date: 2022-02-12 11:40:38
- * @LastEditTime: 2022-02-12 11:52:29
- * @LastEditors: licl
- * @Description: https://mojs.github.io/
- */
 import type { Ref } from 'vue'
 import { computed, onMounted, ref } from 'vue'
 

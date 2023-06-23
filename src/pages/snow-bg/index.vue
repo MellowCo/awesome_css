@@ -1,4 +1,3 @@
-<!-- @link: https://codepen.io/alphardex/pen/dyPorwJ -->
 <template>
   <div class="snow-content">
     <div v-for="i in 200" :key="i" class="snow" />
@@ -13,8 +12,6 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: -1;
-  // height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   filter: drop-shadow(0 0 10px white);
 }
@@ -63,3 +60,9 @@
   }
 }
 </style>
+
+<route lang="yaml">
+meta:
+  name: Snow Background
+  github: xxx
+</route>

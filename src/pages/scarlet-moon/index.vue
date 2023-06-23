@@ -1,8 +1,3 @@
-<!-- @link: https://codepen.io/alphardex/pen/eYmGEGp -->
-<script setup lang="ts">
-
-</script>
-
 <template>
   <div class="scarlet-moon" />
 </template>
@@ -21,8 +16,10 @@
   &::after {
     position: absolute;
     border-radius: inherit;
-    width: 100%;
-    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background-color: inherit;
     box-shadow: inherit;
     content: "";
@@ -43,3 +40,9 @@
   }
 }
 </style>
+
+<route lang="yaml">
+meta:
+  name: Scarlet Moon
+  github: xx
+</route>

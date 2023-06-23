@@ -1,39 +1,33 @@
-<!--
- * @Author: licl
- * @Date: 2022-02-12 09:30:28
- * @LastEditTime: 2022-02-12 15:58:22
- * @LastEditors: licl
- * @Description:
--->
 <script setup lang="ts">
-import SnowBg from '../components/SnowBg/index.vue'
-import LikeBtn from '../components/LikeBtn/index.vue'
-import FlashBtn from '../components/FlashBtn/index.vue'
-import ScarletMoon from '../components/ScarletMoon/index.vue'
+import type { RouteRecordRaw } from 'vue-router'
+
+defineOptions({
+  name: 'IndexPage',
+})
+
+const router = useRouter()
+const routes = router.options.routes.filter(route => !['index', 'all'].includes(route.name as string))
+
+function go(route: RouteRecordRaw) {
+  router.push(route.path)
+}
 </script>
 
 <template>
-  <SnowBg />
-
-  <div class="main-content">
-    <LikeBtn />
-    <FlashBtn />
-    <ScarletMoon />
+  <div mx-auto max-w-300 flex flex-col items-center justify-center>
+    <div mb-5 flex justify-center>
+      <div
+        v-for="(route, index) in routes"
+        :key="index"
+        p="x-4 y-2"
+        m="2"
+        cursor-pointer rounded
+        op="75 hover:100"
+        class="transition-all duration-200 ease-out hover:bg-#888/11"
+        @click="go(route)"
+      >
+        {{ `${index + 1}. ${route.meta?.name || 'Unknown route'}` }}
+      </div>
+    </div>
   </div>
 </template>
-
-<style lang="scss">
-.main-content {
-  display: flex;
-  justify-content: space-around;
-  padding: 30px;
-  .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100px;
-    height: 40px;
-  }
-}
-</style>

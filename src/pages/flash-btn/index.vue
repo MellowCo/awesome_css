@@ -1,25 +1,15 @@
-<!--
- * @Author: licl
- * @Date: 2022-02-12 15:20:05
- * @LastEditTime: 2022-02-12 15:51:01
- * @LastEditors: licl
- * @Description:
--->
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <div class="flash-btn btn">
-    flash btn
+  <div class="flash-btn">
+    flash
   </div>
 </template>
 
 <style scoped lang="scss">
 .flash-btn {
+  display: inline-block;
   overflow: hidden;
   position: relative;
-  padding: 15px 30px;
+  padding: 10px 25px;
   border: 1px #fff solid;
   background-color: #10151e;
   color: #fff;
@@ -50,3 +40,9 @@
   }
 }
 </style>
+
+<route lang="yaml">
+meta:
+  name: Flash Button
+  github: xxx
+</route>

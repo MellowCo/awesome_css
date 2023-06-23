@@ -1,7 +1,6 @@
-<!-- @link: https://juejin.cn/post/7061627681464385573 -->
 <script setup lang="ts">
 import { ref } from 'vue'
-import useMo from './useMo'
+import useMo from './hook/useMo'
 
 const heartRef = ref(null)
 
@@ -16,7 +15,7 @@ function handleClick() {
 </script>
 
 <template>
-  <div class="like-btn btn" @click="handleClick">
+  <div class="like-btn" @click="handleClick">
     <div ref="heartRef" class="heart">
       <svg
         class="heart-svg"
@@ -42,8 +41,14 @@ function handleClick() {
 
 <style scoped lang="scss">
 .like-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
   background-color: #fff;
   cursor: pointer;
+  border: 1px solid #e5e5e5;
+
   .heart {
     position: relative;
     margin-right: 10px;
@@ -64,5 +69,15 @@ function handleClick() {
       stroke: #e05b5b;
     }
   }
+
+  .info{
+    color: #000;
+  }
 }
 </style>
+
+<route lang="yaml">
+meta:
+  name: Like Button
+  github: xxx
+</route>
